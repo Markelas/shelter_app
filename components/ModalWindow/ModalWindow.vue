@@ -2,7 +2,7 @@
   <div class="popup">
     <div class="popup__body">
       <div class="popup__content">
-        <button class="popup__button close-pet-info" @click="$emit('closeModalWindow')">&#215;</button>
+        <button class="popup__button close-pet-info" @click="$emit('closeModal')">&#215;</button>
         <img class="popup__img" :src="activeCard.img" :alt="activeCard.name">
         <div class="popup__data">
           <h3 class="popup__name">{{activeCard.name}}</h3>

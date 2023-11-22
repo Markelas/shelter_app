@@ -1,10 +1,11 @@
 <template>
   <Swiper
-      :modules="[Navigation]"
+      :modules="[Navigation, FreeMode]"
       :slidesPerView="3"
-      :spaceBetween="90"
+      :spaceBetween="10"
       :navigation="true"
-      :pagination="true"
+      :freeMode="true"
+      :breakpoints="swiperOptions.breakpoints"
       class="mySwiper"
   >
     <SwiperSlide v-for="slide in petsInfo" :key="slide.id">
@@ -21,8 +22,25 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel, Keyboard, FreeMode } from 'swiper/modules';
 const props = defineProps(['petsInfo'])
+const swiperOptions = {
+  breakpoints: {
+    1: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    650: {
+      slidesPerView: 2,
+      spaceBetween: 5
+    },
+
+    920: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    }
+  }
+}
 </script>
 
 <style>
@@ -36,4 +54,16 @@ const props = defineProps(['petsInfo'])
   max-width: 1000px;
   margin-top: 40px;
 }
+
+@media (max-width: 650px) {
+  .swiper-slide-active{
+    margin-left: 150px;
+  }
+}
+@media (max-width: 550px) {
+  .swiper-slide-active{
+    margin-left: 20%;
+  }
+}
+
 </style>

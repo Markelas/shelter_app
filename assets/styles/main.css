@@ -274,7 +274,7 @@ a {
 }
 
 .ourfriends__card_img {
-  max-width: 270px;
+  max-width: 100%;
   border-radius: 9px;
 }
 
@@ -282,7 +282,6 @@ a {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   color: #545454;
-  letter-spacing: 6%;
   line-height: 113.6%;
   text-align: center;
   margin: 24px 0 30px 0;
@@ -354,6 +353,7 @@ a {
 
 .popup__button {
   position: absolute;
+  cursor: pointer;
   top: -52px;
   right: -42px;
   width: 52px;
@@ -612,38 +612,6 @@ a {
   #card3 {
     display: none;
   }
-  .carousel {
-    left: -580px;
-    gap: 0px;
-  }
-  .ourfriends_slider_card_block {
-    width: 580px;
-    gap: 0px;
-  }
-  .item_cards {
-    display: flex;
-    gap: 30px;
-    margin-right: 20px;
-  }
-  .item {
-    gap: 0px;
-  }
-  @keyframes move-right {
-    from {
-      left: -580px;
-    }
-    to {
-      left: -1160px;
-    }
-  }
-  @keyframes move-left {
-    from {
-      left: -580px;
-    }
-    to {
-      left: 0px;
-    }
-  }
   /*-------Footer--------*/
   .footer_container {
     display: flex;
@@ -760,22 +728,6 @@ a {
     height: 300px;
   }
   /*--------------------*/
-  .carousel {
-    left: -280px;
-    gap: 0px;
-  }
-  .ourfriends_slider_card_block {
-    width: 300px;
-    gap: 0px;
-  }
-  .item_cards {
-    display: flex;
-    gap: 30px;
-    margin-right: 20px;
-  }
-  .item {
-    gap: 0px;
-  }
   @keyframes move-right {
     from {
       left: -270px;
